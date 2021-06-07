@@ -1,0 +1,46 @@
+
+Force push to remote:
+
+					User_1										|								User_2
+																|
+																|	git branch
+																|		*master
+																|		feature_branch_1
+																|		feature_branch_2
+																|
+																|	git commit -am "Add Seinfield characters"
+																|	git push
+																|
+																| !!! If mistake and don't want to exist the commit in remote repository:
+																| Options:	
+																|	1. - revert the commit
+																|   2. - delete the lines in commit
+																|	   - merge commit
+																|	   - push it back
+																|      
+git fetch														|
+git show origin/master		: shows the commit					|
+	"Add Seinfield characters"									|
+																|
+git log						: shows only commits for User_1		|
+git push --force			: rejects the incoming commit 		|
+							  from User_2						|
+																|
+																|
+git show origin/master											|	git pull
+																|	git reset --hard origin/master
+																|	git log
+																|	git status
+																|
+																|
+																|
+																|
+																|
+																|
+																|
+																|
+																|
+																|
+																|
+																|
+																|
