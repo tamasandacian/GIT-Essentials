@@ -1,0 +1,49 @@
+To prune stale branches:
+	- remove tracking branches not remote branches
+
+# Remote branches:
+	1. branch on the remote repository 				(e.g bugfix)
+	2. local snapshot of the remote branch 			(e.g origin/bugfix)
+	3. local branch, tracking the remote branch 	(e.g bugfix)
+
+git remote prune origin
+git remote
+
+User_1:															
+git checkout -b prune_test											
+git branch 														
+	master																
+	*prune_test															
+																
+git push -u origin prune_test											
+git branch -r													
+	origin/master													
+	origin/prune_test											
+
+User_2:
+git branch -r
+	origin/master
+							
+git fetch
+
+git branch -r
+	origin/master
+	origin/prune_test
+																    
+git push origin :prune_test		
+git branch -r
+	origin/master
+
+User_1:																
+git fetch														
+git branch -r													
+	origin/master												
+	origin/prune_test											
+																
+# If User_1 still sees prune_test feature						
+git remote prune origin --dry-run								
+git remote prune origin											
+git branch -r
+	origin/master												
+
+																					
