@@ -1,21 +1,21 @@
 
 Identify merged branches:
 
-git branch --merged						: shows which branches are merged
-git branch --no-merged					: shows which branches are not merged
-git branch -r --merged					: shows which branches are merged in remote
+git branch --merged		# shows which branches are merged
+git branch --no-merged	# shows which branches are not merged
+git branch -r --merged	# shows which branches are merged in remote
 
 
 
 git branch
 	feature_branch_1
 	feature_branch_2
-	*master
+	* master
 
 git checkout feature_branch_1
 
 git branch
-	*feature_branch_1
+	* feature_branch_1
 	feature_branch_2
 	master
 
@@ -35,6 +35,6 @@ git branch --merged
 git checkout master
 git merge feature_branch-2
 
-git branch -r --merged				: check merged branches with remote
+git branch -r --merged	# check merged branches with remote
 
 					
